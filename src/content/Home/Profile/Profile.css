@@ -5,7 +5,7 @@
     /* overflow: hidden; */
     height: 10%;
     min-height: fit-content;
-    background: #333;
+    /* background: #333; */
 }
 .profile-parent{
     display: flex;
@@ -68,7 +68,7 @@
     width: 92%;
     background-size: cover;
     border-radius: 50%;
-    background-image: url('../../assets//Home//profilephoto.jpg');
+    background-image: url('../../../assets//Home//profilephoto.jpg');
     background-repeat:no-repeat;
     background-position: center;
 }

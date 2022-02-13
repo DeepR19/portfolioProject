@@ -1,4 +1,5 @@
 import React from 'react'
+import Typical from 'react-typical';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faGithub,
@@ -6,8 +7,6 @@ import {
     faTelegram,
     faWhatsapp,
     faYoutube} from '@fortawesome/free-brands-svg-icons'
-
-import Typical from 'react-typical';
 
 import "./Profile.css"
 

@@ -1,0 +1,8 @@
+.home-container{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* height: 50vh !important; */
+    min-height: 625px;
+    background: linear-gradient(to top left, #3e4c6b,#222c3f);
+}
