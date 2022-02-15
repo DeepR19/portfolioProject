@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
+import "aos/dist/aos.css";
 import "./About.css";
 
 export default function About() {
+
+    useEffect(()=>{
+        AOS.init({
+            duration: 2000
+          });
+    },[])
+
   return (
-    <div className='about-container'>
+    <div data-aos="fade-up" className='about-container' id='about'>
         <div className="about-header">
             <h3>About Me</h3>
             <p>Why Choose Me?</p>

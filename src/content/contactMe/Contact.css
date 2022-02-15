@@ -1,0 +1,146 @@
+.contact-container{
+    height: 120vh;
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.contact-details{
+    height: 70vh;
+    width: 75%;
+    background: linear-gradient(-30deg, #364c66, #366e72);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 5px #aaa;
+    margin-top: 30px;
+}
+
+.contact-data{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.contact-1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    padding: 0 20px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.contact-1 h3{
+    color: #fff;
+    font-size:1.8em;
+    /* font-weight: bolder; */
+    letter-spacing: 1.5px;
+}
+.contact-2{
+    height: 100%;
+    /* width: 60%; */
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: blue;     */
+}
+.contact-1 .imgBx{
+    margin-top: 30px;
+    opacity: .6;
+    height: 50%;
+    width: 105%;
+    margin-left: -10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px #fff8;
+    background-image: url('../../assets/Home//mailz.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact-form{
+    height: 75%;
+    /* max-width: 90%; */
+    background: #eee;
+    border-radius: 10px;
+    border: 4px solid #fff1;
+    box-shadow: inset 0 0 5px #0008;
+    padding: 20px 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.contact-user-data{
+    height: 60px;
+    width: 100%;
+    /* background: red; */
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.contact-textarea{
+    height: 35%;
+    margin-bottom: 0;
+    /* background: red; */
+}
+.contact-user-data label{
+    font-size: 1em;
+    font-weight: bolder;
+    color: #0006;
+    letter-spacing: 1px;
+}
+.contact-user-data input[type="text"],
+#message{
+    background: #ddd;
+    
+    width: 97%;
+    height:40px;
+    border: 2px solid #0000000a;
+    outline: none;
+    border-radius: 4px;
+    color: #0009;
+    /* text-shadow: 0 0 1px #007; */
+    font-size: 1em;
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#message{
+    padding: 5px 5px;
+    height: auto;
+}
+.contact-send{
+    margin: 20px 10px;
+    height: 70px;
+    width: 100px;
+    padding: 5px;
+    font-size: 1.1em;
+    border-radius: 40px;
+    border: 2px solid var(--orange);
+    outline: none;
+    background: linear-gradient(#364c66, #366e72);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.gif{
+    height: 10px;
+    margin-left: -5px;
+    border-radius: 50px;
+    background-image: url('../../assets//Home//load2.gif');
+    background-size: cover;
+}
+.contact-send.active{
+    width: 150px;
+}
+.contact-send.active .gif{
+    width: 50px;
+}
