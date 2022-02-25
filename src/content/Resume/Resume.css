@@ -1,14 +1,23 @@
 .resume-container{
     height: 120vh;
+    /* height: 5%;
+    min-height: fit-content; */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* background-color: red; */
+}
+
+.res-header{
+    margin-top: 100px;
 }
 .resume-date-container{
     /* margin-bottom: -100px; */
-    height: 55%;
+    /* height: 55%; */
+    /* background: red; */
+    min-height: fit-content;
     width: 90%;
     /* box-shadow: 0 0 5px #000; */
     display: flex;
@@ -21,6 +30,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .5s;
+
 }
 .resume-icon{
     height: 80%;
@@ -64,11 +75,12 @@
     /* padding-top: 30px; */
     box-shadow: 10px 0 5px -7px #888;
 
-    height: 600px;
+    /* height: 600px; */
 }
 
 .res-li li{
     list-style: none;
+  
     /* z-index: 100; */
 }
 
@@ -99,8 +111,9 @@
 
 .res-li li span{
     position: absolute;
-    margin-top: 8px;
-    margin-left: -105px;
+    left: 14%;
+    /* margin-top: 8px;
+    margin-left: -105px; */
     font-weight: 500;
     color: #000;
 }
@@ -118,11 +131,15 @@
 
 
 .resume-link-data{
-    height: 100%;
+    /* background-color: green; */
+    height: 80%;
+    /* min-height: fit-content; */
     width: 65%;
     overflow-y: scroll;
     scroll-behavior: smooth;
     pointer-events: none;
+    transition: .5s;
+
 }
 .edu-side,
 .work-side,
@@ -131,11 +148,13 @@
 .interest-side{
     padding: 20px 10px;
     margin-left: 35px;
+    /* min-height: fit-content; */
     height: 100%;
     width: 90%;
     /* background: red; */
     /* border-bottom: 2px solid #000; */
     overflow: scroll;
+    transition: .5s;
 }
 .interest-data{
     height: 100px;
@@ -242,8 +261,8 @@
     height: 100px;
     width: 100%;
     display: flex;
-    margin: 20px;
-    /* background: red; */
+    padding: 20px 0;
+    border-bottom: 2px solid #0003;
 }
 .resume-edu-data> span{
    
@@ -287,11 +306,7 @@
 
 @media screen and (max-width: 1110px)
 {
-    .resume-container{
-        width: 100%;
-        height: 50vh;
-        /* background-color: red; */
-    }
+  
     .resume-icon-side{
         /* background:red; */
         margin-left: -20px;
@@ -300,8 +315,8 @@
         margin-left: -20px;
         font-size: .95em;
     }
-    .res-li li span{
-        margin-left: -69px;
+    .edu-data span{
+        font-size: .9em;
     }
     .resume-date-container{
         font-size: 1em;
@@ -330,69 +345,65 @@
 }
 /* @media screen and (max-width: 910px){
 @media screen and (max-width: 810px){ */
-@media screen and (max-width: 670px){
-    .resume-container{
-        width: 100%;
-        height: 150vh;
-        /* background-color: red; */
-    }
+@media screen and (max-width: 810px){
+   .resume-container{
+       /* background: yellow; */
+       height: 1200px;
+   }
     .res-header{
         margin-top: 100px;
     }
-    .res-li{
-        height: 370px;
-    }
-    .resume-icon-side{
-        height: 35%;
-    }
     .resume-date-container{
-        height: 1500px;
+        height: 1300px;
         flex-direction: column;
         align-items: center;
-        padding-top: 0;
-        margin-top: -100px;
         /* background-color: red; */
     }
-   .resume-link-data{
-       height: 50%;
-       /* background-color: green; */
-       box-shadow: 0 0 5px #0004;
-
-       margin-top: -450px;
-       /* padding-left: -60px; */
-       width: 88%;
-   }
-   .edu-side,
-    .work-side,
-    .pro-side,
-    .project-side,
-    .interest-side{
-        padding: 0 10px;
-        /* background: red; */
-        /* padding: 0; */
-        margin: 0 10px ;
-    }
-    .project-data{
-        /* background: red; */
+    .resume-link{
+        /* background-color: green; */
+        height: 390px;
         width: 100%;
     }
-    .edu-side{
-        
-        padding-right: 20px;
+    /* .resume-icon{
+    background: red;
+    } */
+    .resume-icon-side{
+        /* background: yellow; */
+        height: 350px;
+        /* height: max-content; */
     }
-    .edu-side h3{
-        font-size: 1em;
-    }
-    .edu-data span{
-        font-size: .8em;
+    .resume-link-data{
+        width: 100%;
+        height: 500px;
+        /* background: grey; */
     }
     .res-li li span{
-        margin-left: -140px;
+        left: 21%;
+        /* background: red; */
+        margin-top: 10px;
     }
-    /* .res-li> li a.active{
-        gap: 110px;
-    } */
-    .resume-link{
-        width: 100%;
+ 
+}
+@media screen and (max-width: 510px){
+    
+    .res-header{
+        margin-top: 0;
+    }
+    .res-li li span{
+        left: 25%;
+    }
+    .pro-data{
+        grid-template-columns: auto auto;
+
+    }
+    .resume-edu-data > h3{
+        font-size: 1em;
+    }
+    .resume-edu-data > h2{
+        font-size: .9em;
+    }
+    .pro-work-data{
+        margin: 0 20px;
     }
 }
+

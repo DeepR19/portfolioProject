@@ -1,14 +1,13 @@
 import React from 'react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faArrowCircleUp}from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import {faArrowCircleUp}from "@fortawesome/free-solid-svg-icons";
 
 import "./Header.css";
 
 export default function Header() {
 
-    const arrow = document.querySelector('.back-to-top');
     window.addEventListener('scroll',()=>{
+        const arrow = document.querySelector('.back-to-top');
         if(window.scrollY > 600){
             arrow.style.cssText = 'opacity: 1;'
         }else{
@@ -42,10 +41,11 @@ export default function Header() {
     </div>
 
 
-        <div className="back-to-top">
-            <FontAwesomeIcon icon={faArrowCircleUp} className='ico'/>
+  
 
-        </div>
+        {/* <button className="back-to-top">
+            <FontAwesomeIcon icon={faArrowCircleUp} className='ico'/>
+        </button> */}
     </>
   )
 }

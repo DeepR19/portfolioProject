@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState} from 'react';
 import AOS from "aos";
+
 import "aos/dist/aos.css";
+
+import emailjs from 'emailjs-com';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaperPlane}from "@fortawesome/free-solid-svg-icons"
@@ -11,10 +14,16 @@ import {
     faWhatsapp,
     faYoutube} from '@fortawesome/free-brands-svg-icons'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import "./Contact.css";
 
 export default function Contact() {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
     useEffect(()=>{
         AOS.init({
@@ -22,13 +31,41 @@ export default function Contact() {
         })
     })
 
-    const time =()=>{
+    const notice =()=>{
+        if(!name || !email || !message){
+            toast.error("Please Fill all details");
+            return;
+        }
+        toast.success("Message send Successfully!");
+    };
+    
+
+    const time =(e)=>{
+        e.preventDefault();
+
+        emailjs.sendForm('service_uohms4h',
+         'template_e28148e',
+          e.target,
+          'user_HQa1E6jwgRkPMWTLNx1g8')
+        .then((result) => {
+            console.log(result.text);
+        }).catch((error) => {
+            console.log(error.text);
+        });
+
         document.querySelector('.contact-send').classList.add('active');
 
         setTimeout(function(){
             document.querySelector('.contact-send').classList.remove('active');
         },3000);
-    }
+
+        setName('');
+        setEmail('');
+        setMessage('');
+        // console.log(name, email, message)
+    };
+
+   
 
   return (
     <div data-aos="fade-up" className='contact-container' id='contact'>
@@ -44,7 +81,13 @@ export default function Contact() {
 
 
         <div className="contact-details">
-            {/* <div className="contact-decor"> */}
+
+            {/* Toast notifier */}
+            <ToastContainer
+            style={{"margin-top": "80px", "font-weight": "bolder"}}
+            className="toaster-container"
+            pauseOnHover/>
+
 
                 <div className="contact-data">
                     <div className="contact-1">
@@ -64,21 +107,21 @@ export default function Contact() {
                     </div>
 
                     <div className="contact-2">
-                        <form autoComplete='false' className="contact-form">
+                        <form autoComplete='false' onSubmit={time} className="contact-form">
                             <div className="contact-user-data">
                                 <label htmlFor="name">Name</label>
-                                <input type="text" name="name" id="name"/>
+                                <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="name" id="name"/>
                             </div>
                             <div className="contact-user-data">
                                 <label htmlFor="name">Email</label>
-                                <input type="text" name="email" id="email"/>
+                                <input type="text"  value={email} onChange={(e)=>setEmail(e.target.value)} name="email" id="email"/>
                             </div>
                             <div className="contact-user-data contact-textarea">
                                 <label htmlFor="name">Message</label>
-                                <textarea name="message" id="message" cols="35" rows="40"></textarea>
+                                <textarea name="message"  value={message} onChange={(e)=>setMessage(e.target.value)} id="message" cols="35" rows="40"></textarea>
                             </div>
                             
-                            <button className='contact-send' onClick={time}>
+                            <button type='submit' className='contact-send' onClick={notice}>
                                 <FontAwesomeIcon icon={faPaperPlane} className='ico' />
                                  Send 
                                  <div className="gif"></div>

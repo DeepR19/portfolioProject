@@ -8,13 +8,16 @@
     flex-direction: column;
 
 }
+.contact-header{
+    margin-top: 40px;
+}
 .contact-details{
     height: 70vh;
     width: 75%;
     background: linear-gradient(-30deg, #364c66, #366e72);
     border-radius: 10px;
     box-shadow: 0 0 4px 5px #aaa;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 .contact-data{
@@ -34,6 +37,7 @@
     color: #fff;
     font-size:1.8em;
     /* font-weight: bolder; */
+    
     letter-spacing: 1.5px;
 }
 .contact-2{
@@ -146,7 +150,7 @@
 }
 
 
-@media screen and (max-width: 1110px){
+/* @media screen and (max-width: 1110px){
     .contact-container{
         height: 50vh;
         padding-bottom: 150px;
@@ -154,22 +158,43 @@
     .contact-details{
         /* background: red; */
         /* top: 0; */
-        width: 86%;
-        height: 70%;
-    }
-}
+        /* width: 86%; */
+        /* height: 70%; */
+    /* } */
+/* } */ 
 @media screen and (max-width: 1110px){
     .contact-container{
-        /* margin-top: 410px; */
-
-        /* background-color: green; */
         margin-bottom: 100px;
     }
-    .contact-header{
-        margin-top: 500px;
+    .contact-1::before{
+        position: absolute;
+        content: '';
+        
+        /* background: red; */
+        /* height: 50px; */
+        /* background: red; */
+        /* width: 50px; */
+        filter: blur(2px);
+        border-radius: 50%;
+        margin-left: -20%;
+    }
+    .contact-data{
+        display: flex;
+        align-items: center;
     }
     .contact-details{
-        height: 70vh;
+        height: 50vh;
+        overflow: hidden;
+    }
+    .contact-header{
+        margin-top: 80px;
+        /* background: red; */
+        margin-bottom: -10px;
+    }
+    .contact-details{
+        /* height: 70vh; */
+
+        height: 70%;
         /* background: red; */
         display: flex;
         justify-content: center;
@@ -192,5 +217,24 @@
         height: 50%;
         padding-top: 2px;
         padding-bottom: 70px;
+    }
+}
+@media screen and (max-width: 920px) {
+    .contact-1{
+        /* background: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-details{
+        height: 50vh;
+        background-color: red;
+    }
+}
+@media screen and (max-width: 620px) {
+   
+    .contact-details{
+        height: 50vh;
+        background-color: red;
     }
 }
