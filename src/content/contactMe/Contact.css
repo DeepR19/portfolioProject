@@ -1,3 +1,13 @@
+
+.toaster-container{
+    position: fixed;
+    top: 20px;
+    right: 12px;
+}
+
+
+
+
 .contact-container{
     height: 120vh;
     /* height: 100vh; */
@@ -236,5 +246,13 @@
     .contact-details{
         height: 50vh;
         background-color: red;
+    }
+}
+@media screen and (max-width: 415px) {
+    .contact-header{
+        margin-top: -70px;
+    }
+    .contact-container{
+        height: 800px;
     }
 }

@@ -1,23 +1,91 @@
 
-.back-to-top{
+
+
+
+
+
+
+
+
+
+
+.back-to-top {
     position: fixed;
-    right: 40px;
-    opacity: 0;
-    bottom:40px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3em;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 0 5px 10px #999;
+    z-index: 100;
+  }
+  
+  .back-to-top:hover {
+    background: #c20606;
+  }
+
+
+.hamburgar{
+    position: absolute;
+    top: 30px;
+    left: 20px;
     height: 40px;
     width: 40px;
-    background-color: RED;
+    background-color: #ddd;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 0 10px 2px #0005;
-    border: none;
-    z-index: 10000;
+    flex-direction: column;
     cursor: pointer;
+    transition: .4S ease-out; 
 }
+.hamburgar.active{
+    left:46%;
+    top: 53px;
+    border-radius: 50%;
+    height: 50px;
+    WIDTH: 50px;
+    background: #fff;
+    box-shadow: 2px 2px 3px #0007;
+    z-index: 100000;
+}
+.hamburgar.active span{
+    background-color: #0009;
+}
+.hamburgar span{
+    height: 2px;
+    margin: 2px;
+    width: 70%;
+    background: #000;
+    transition: .2s;
+}
+.hamburgar.active span:nth-child(1){
+    height: 3px;
+    transform: rotate(45deg)  translateX(2px);
+    width: 40%;
+    margin-left: -10px;
+    /* transition-delay: .1s; */
+}
+.hamburgar.active span:nth-child(3){
+    height: 3px;
+    transform: rotate(45deg) translateX(7px) translateY(-9.6px);
+    width: 40%;
+    margin-left: -10px;
+}
+.hamburgar.active span:nth-child(2){
+    height: 3px;
+    transform: rotate(-45deg) translateX(4px) translateY(4px);
+    width: 80%;
+    margin-left: -10px;
+    /* transition-delay: .1s; */
+
+}
+
+
 
 
 .header-container{
@@ -38,6 +106,31 @@
     display: flex;
     justify-content: space-between;
 }
+.header-navigation.active{
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #ddd;
+    /* padding: 100px; */
+    transition: 1s;
+    z-index: 100000;
+}
+.header-navigation.active .page-link.active a,
+.header-navigation.active .page-link:hover a
+{
+    background: #fff;
+    color: #000;
+    margin: 2px 3px;
+    margin-top: 0;
+    padding: 10px 30px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px #0005;
+}
 .header-navigation .page-link{
     list-style: none;
     margin: 0 30px 0 0;
@@ -49,9 +142,26 @@
     text-decoration: none;
     transition: .2s;
 }
+.header-navigation.active .page-link a{
+    color: #0006;
+
+}
+.header-navigation.active .page-link {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 30px 0;
+    padding: 10px 10px;
+    border-radius: 30px;
+    box-shadow: inset 2px 2px 4px #0005;
+}
+
 .page-link.active a,
 .page-link a:hover{
     color: var(--dark-orange);
+}
+.header-navigation.active .page-link a:hover{
+    font-size: 1.3em;
 }
 .page-link a:hover{
     font-size: 1.1em;
@@ -63,13 +173,44 @@
     height: 100vh;
     width: 100%;
 }
+@media screen and (max-width: 1700px){
+    .hamburgar{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@media screen and (max-width: 1100px){
+    .hamburgar{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .header-navigation{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .header-navigation.active{
+        opacity: 0;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
 @media screen and (max-width: 610px){
+    .hamburgar{
+        opacity: 1;
+        pointer-events: all;
+    }
     .header-name{
         position: absolute;
         font-size: 3em;
     }
     .header-navigation{
-        margin-top: 100px;
-        margin-left: 6%;
+        opacity: 0;
+        pointer-events: none;
+        /* margin-top: 100px; */
+        /* margin-left: 6%; */
+    }
+    .header-navigation.active{
+        opacity: 1;
+        pointer-events: all;
     }
 }

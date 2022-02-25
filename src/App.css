@@ -25,6 +25,36 @@
   color: white;
 }
 
+.app-footer{
+  height: 70px;
+  width: 100%;
+  color: #0007;
+  display: flex;
+  flex-direction: column;
+}
+.app-footer p{
+  margin-top: 30px;
+}
+.app-footer > em{
+  font-family: .3em;
+}
+.app-footer-line{
+  height: 6px;
+  width: 100%;
+  background: #0002;
+}
+.app-footer-line::before{
+  position: absolute;
+  content: '';
+  margin-top: -17px;
+  left: 50%;
+  height:30px;
+  width: 30px;
+  background-color: #fff;
+  border: 3px solid #0003;
+  border-radius: 50%;
+}
+
 .App-link {
   color: #61dafb;
 }

@@ -42,6 +42,10 @@ export default function Contact() {
 
     const time =(e)=>{
         e.preventDefault();
+        
+        if(!name || !email || !message){
+            return;
+        }
 
         emailjs.sendForm('service_uohms4h',
          'template_e28148e',
@@ -84,7 +88,7 @@ export default function Contact() {
 
             {/* Toast notifier */}
             <ToastContainer
-            style={{"margin-top": "80px", "font-weight": "bolder"}}
+            style={{"marginTop": "80px", "fontWeight": "bolder"}}
             className="toaster-container"
             pauseOnHover/>
 
