@@ -1,8 +1,25 @@
-import React from 'react'
+import React from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faArrowCircleUp}from "@fortawesome/free-solid-svg-icons";
+
 import "./Header.css";
 
 export default function Header() {
+
+    const arrow = document.querySelector('.back-to-top');
+    window.addEventListener('scroll',()=>{
+        if(window.scrollY > 600){
+            arrow.style.cssText = 'opacity: 1;'
+        }else{
+            arrow.style.cssText = 'opacity: 0;'
+        }
+    });
+
+  
+
   return (
+      <>
     <div className='header-container' id="header">
         <div className="header-name">
             DeepR19
@@ -23,5 +40,12 @@ export default function Header() {
             </li>
         </div>
     </div>
+
+
+        <div className="back-to-top">
+            <FontAwesomeIcon icon={faArrowCircleUp} className='ico'/>
+
+        </div>
+    </>
   )
 }

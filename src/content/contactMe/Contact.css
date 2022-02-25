@@ -144,3 +144,53 @@
 .contact-send.active .gif{
     width: 50px;
 }
+
+
+@media screen and (max-width: 1110px){
+    .contact-container{
+        height: 50vh;
+        padding-bottom: 150px;
+    }
+    .contact-details{
+        /* background: red; */
+        /* top: 0; */
+        width: 86%;
+        height: 70%;
+    }
+}
+@media screen and (max-width: 1110px){
+    .contact-container{
+        /* margin-top: 410px; */
+
+        /* background-color: green; */
+        margin-bottom: 100px;
+    }
+    .contact-header{
+        margin-top: 500px;
+    }
+    .contact-details{
+        height: 70vh;
+        /* background: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-data{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-1 h3{
+        /* background: red; */
+        width: 420px;
+    }
+    .colz{
+        /* background-color: green; */
+        width: 420px;
+    }
+    .contact-2 form{
+        margin-top: -240px;
+        height: 50%;
+        padding-top: 2px;
+        padding-bottom: 70px;
+    }
+}

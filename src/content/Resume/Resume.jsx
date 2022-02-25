@@ -24,21 +24,16 @@ export default function Resume() {
 
     const time =()=>{
         const list = document.querySelectorAll('.res-li > li > a');
-        const lists = document.querySelectorAll('.res-links');
+        // const data = document.querySelector('.resume-link-data');
+        // const height = data.offsetHeight;
+
         function activeLink(){
             list.forEach((item)=>{
                 item.classList.remove('active');
                 this.classList.add('active');
             });
-            lists.forEach((item)=>{
-                item.classList.remove('active');
-                this.classList.add('active');
-            })
         };
         list.forEach((item)=>{
-            item.addEventListener('click', activeLink)
-        })
-        lists.forEach((item)=>{
             item.addEventListener('click', activeLink)
         })
     }
@@ -46,7 +41,7 @@ export default function Resume() {
 
   return (
         <div data-aos="fade-up" className="resume-container" id='resume'>
-            <div className="about-header">
+            <div className="about-header res-header">
                 <h3>Resume</h3>
                 <p>My formal Bio Details</p>
 
@@ -61,65 +56,45 @@ export default function Resume() {
                 <div className="resume-link">
                     
                     <div className="resume-icon">
-                    <li>
-                                <a href="#edu" className='.res-links' onClick={time}>
-                                    <FontAwesomeIcon icon={faUserGraduate}/>
-                                    Education
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#his" className='.res-links' onClick={time}>
-                                    <FontAwesomeIcon icon={faHistory}/>
-                                    Work History
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#code" className='.res-links' onClick={time}>
-                                    <FontAwesomeIcon icon={faLaptopCode}/>
-                                    Programming Skills
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#bar" className='.res-links' onClick={time}>
-                                    <FontAwesomeIcon icon={faChartBar}/>
-                                    Projects
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#interest" className='.res-links' onClick={time}>
-                                    <FontAwesomeIcon icon={faPalette}/>
-                                    Interests
-                                </a>
-                            </li>
+                    
                         <div className="resume-icon-side"></div>
                         <div className="res-li">
                             <li>
+                                <span>Education</span>
                                 <a href="#edu" className='.res-link' onClick={time}>
-                                    <FontAwesomeIcon icon={faUserGraduate}/>
+                                    <FontAwesomeIcon className='FA' icon={faUserGraduate}/>
                                     Education
                                 </a>
                             </li>
                             <li>
+                            <span>Work History</span>
+
                                 <a href="#his" className='.res-link' onClick={time}>
-                                    <FontAwesomeIcon icon={faHistory}/>
+                                    <FontAwesomeIcon className='FA' icon={faHistory}/>
                                     Work History
                                 </a>
                             </li>
                             <li>
+                            <span>Programming Skills</span>
+
                                 <a href="#code" className='.res-link' onClick={time}>
-                                    <FontAwesomeIcon icon={faLaptopCode}/>
+                                    <FontAwesomeIcon className='FA' icon={faLaptopCode}/>
                                     Programming Skills
                                 </a>
                             </li>
                             <li>
+                            <span>Projects</span>
+
                                 <a href="#bar" className='.res-link' onClick={time}>
-                                    <FontAwesomeIcon icon={faChartBar}/>
+                                    <FontAwesomeIcon className='FA' icon={faChartBar}/>
                                     Projects
                                 </a>
                             </li>
                             <li>
+                            <span>Interests</span>
+
                                 <a href="#interest" className='.res-link' onClick={time}>
-                                    <FontAwesomeIcon icon={faPalette}/>
+                                    <FontAwesomeIcon className='FA' icon={faPalette}/>
                                     Interests
                                 </a>
                             </li>

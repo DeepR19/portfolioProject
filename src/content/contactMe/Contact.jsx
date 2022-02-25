@@ -32,7 +32,7 @@ export default function Contact() {
 
   return (
     <div data-aos="fade-up" className='contact-container' id='contact'>
-        <div className="about-header">
+        <div className="about-header contact-header">
             <h3>Contact Me</h3>
             <p>Lets Keep in Touch</p>
 

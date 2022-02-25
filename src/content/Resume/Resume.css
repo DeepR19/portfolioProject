@@ -7,6 +7,7 @@
     flex-direction: column;
 }
 .resume-date-container{
+    /* margin-bottom: -100px; */
     height: 55%;
     width: 90%;
     /* box-shadow: 0 0 5px #000; */
@@ -39,8 +40,8 @@
 .resume-icon-side{
     position: absolute;
     background: #000;
-    height: 56%;
-   margin-top: -40px;
+    height: 50%;
+   /* margin-top: -1%; */
     width: 40px;
     overflow: scroll;
     /* scroll-behavior: smooth; */
@@ -54,13 +55,13 @@
     display: flex;
     justify-content: flex-start;
     width: 170px;
-    margin: 30px 50px;
+    /* margin: 30px 50px; */
 
 }
 .res-li{
-    margin-top: -55px;
+    margin-top: -2%;
     /* background: red; */
-    padding-top: 30px;
+    /* padding-top: 30px; */
     box-shadow: 10px 0 5px -7px #888;
 
     height: 600px;
@@ -68,12 +69,13 @@
 
 .res-li li{
     list-style: none;
+    /* z-index: 100; */
 }
 
 .res-li> li a{
     text-decoration: none;    
     background: #000;
-    color: #fff;
+    color: transparent;
     text-align: center;
     height: 40px;
     width: 20px;
@@ -89,13 +91,23 @@
     /* z-index: 1000; */
     transition: .5s;
     gap: 30px;
+    z-index: 1000;
 }
-.res-links.active{
-    color: red;
+.res-li> li a > .FA{
+    color: #fff;
 }
+
+.res-li li span{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -105px;
+    font-weight: 500;
+    color: #000;
+}
+
 .res-li li a.active{
     width: 85%;
-
+    color: #fff;
 }
 
 
@@ -108,12 +120,9 @@
 .resume-link-data{
     height: 100%;
     width: 65%;
-    /* background: green; */
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
-    /* flex-direction: column;  */
-    overflow: scroll;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    pointer-events: none;
 }
 .edu-side,
 .work-side,
@@ -273,4 +282,117 @@
     color: #fff;
     margin-top: 20px;
     margin: 10px;
+}
+
+
+@media screen and (max-width: 1110px)
+{
+    .resume-container{
+        width: 100%;
+        height: 50vh;
+        /* background-color: red; */
+    }
+    .resume-icon-side{
+        /* background:red; */
+        margin-left: -20px;
+    }
+    .res-li li{
+        margin-left: -20px;
+        font-size: .95em;
+    }
+    .res-li li span{
+        margin-left: -69px;
+    }
+    .resume-date-container{
+        font-size: 1em;
+    }
+    .interest-data{
+        height: 80px;
+    }
+    .interest-data h3{
+        /* color: var(--orange); */
+        font-size: 1.2em;
+        /* margin-bottom: 0; */
+    }
+
+    .interest-data p{
+        /* color: var(--orange); */
+        font-size: .8em;
+        /* margin-bottom: 0; */
+    }
+    .pro-work-data{
+        
+        width: 150px;
+        margin: 0 10px ;
+       
+        font-size: 1em;
+    }
+}
+/* @media screen and (max-width: 910px){
+@media screen and (max-width: 810px){ */
+@media screen and (max-width: 670px){
+    .resume-container{
+        width: 100%;
+        height: 150vh;
+        /* background-color: red; */
+    }
+    .res-header{
+        margin-top: 100px;
+    }
+    .res-li{
+        height: 370px;
+    }
+    .resume-icon-side{
+        height: 35%;
+    }
+    .resume-date-container{
+        height: 1500px;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        margin-top: -100px;
+        /* background-color: red; */
+    }
+   .resume-link-data{
+       height: 50%;
+       /* background-color: green; */
+       box-shadow: 0 0 5px #0004;
+
+       margin-top: -450px;
+       /* padding-left: -60px; */
+       width: 88%;
+   }
+   .edu-side,
+    .work-side,
+    .pro-side,
+    .project-side,
+    .interest-side{
+        padding: 0 10px;
+        /* background: red; */
+        /* padding: 0; */
+        margin: 0 10px ;
+    }
+    .project-data{
+        /* background: red; */
+        width: 100%;
+    }
+    .edu-side{
+        
+        padding-right: 20px;
+    }
+    .edu-side h3{
+        font-size: 1em;
+    }
+    .edu-data span{
+        font-size: .8em;
+    }
+    .res-li li span{
+        margin-left: -140px;
+    }
+    /* .res-li> li a.active{
+        gap: 110px;
+    } */
+    .resume-link{
+        width: 100%;
+    }
 }
