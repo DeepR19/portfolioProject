@@ -7,7 +7,7 @@ import {
     faTelegram,
     faWhatsapp,
     faYoutube} from '@fortawesome/free-brands-svg-icons'
-
+import {NavLink} from "react-router-dom";
 import "./Profile.css"
 
 
@@ -63,7 +63,7 @@ export default function Profile() {
 
                 <div className="profile-options">
                     <button className="btn primary-btn">
-                        Hire Me
+                        <NavLink to='/hire'>Hire Me</NavLink>
                     </button>
 
                     <a href="DeepakCV.pdf" download='DeepakCV.pdf'>

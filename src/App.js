@@ -1,7 +1,7 @@
-import Home from "./content/Home/Home";
-import About from "./content/About/About";
-import Contact from "./content/contactMe/Contact";
-import Resume from './content/Resume/Resume';
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+
+import HireMe from "./content/HireMe/Hire";
+import Main from "./content/main";
 
 import './App.css';
 
@@ -9,17 +9,12 @@ function App() {
 
   return (
     <div className="App">
-      <Home/>
-      <About/>
-      <Resume/>
-      <Contact/>
-
-      <div className='app-footer'>
-        <span className="app-footer-line"></span>
-        <p>
-          Deepak Portfolio<em> -- DeepR2019</em>
-        </p>
-      </div>
+      <Router>
+          <Switch>
+              <Route exact path="/" component={Main}/>
+              <Route exact path="/hire" component={HireMe}/>
+          </Switch>
+        </Router>
     </div>
   );
 }

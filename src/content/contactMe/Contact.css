@@ -22,7 +22,7 @@
     margin-top: 40px;
 }
 .contact-details{
-    height: 70vh;
+    height: 70%;
     width: 75%;
     background: linear-gradient(-30deg, #364c66, #366e72);
     border-radius: 10px;
@@ -192,10 +192,9 @@
         display: flex;
         align-items: center;
     }
-    .contact-details{
+    /* .contact-details{
         height: 50vh;
-        overflow: hidden;
-    }
+    } */
     .contact-header{
         margin-top: 80px;
         /* background: red; */
@@ -203,6 +202,7 @@
     }
     .contact-details{
         /* height: 70vh; */
+        overflow: hidden;
 
         height: 70%;
         /* background: red; */
@@ -230,29 +230,34 @@
     }
 }
 @media screen and (max-width: 920px) {
+    .contact-details{
+        height: 100vh;
+        /* background-color: red; */
+    }
     .contact-1{
         /* background: red; */
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .contact-details{
-        height: 50vh;
-        background-color: red;
-    }
 }
 @media screen and (max-width: 620px) {
-   
+   .back-to-top{
+       height: 50px;
+       width: 50px;
+       font-size: 2.5em;
+       padding: 0;
+   }
+
     .contact-details{
-        height: 50vh;
+        font-size: .8em;
+        /* height: 100vh; */
         background-color: red;
     }
 }
 @media screen and (max-width: 415px) {
-    .contact-header{
-        margin-top: -70px;
+    .contact-details{
+        width: 90%;
     }
-    .contact-container{
-        height: 800px;
-    }
+    
 }

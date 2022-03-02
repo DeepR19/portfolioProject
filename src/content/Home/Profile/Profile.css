@@ -2,10 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
     height: 10%;
     min-height: fit-content;
-    /* background: #333; */
 }
 .profile-parent{
     display: flex;
@@ -29,10 +27,7 @@
     font-size: 2.4em;
     font-family: cursive;
     margin: -40px;
-    /* width: fit-content; */
-    /* flex-wrap: wrap; */
     overflow-wrap: break-word;
-    /* word-wrap: break-word; */
 }
 .primary-text{
     color: var(--white);
@@ -53,7 +48,6 @@
 }
 
 .profile-options .highlighted-btn:hover{
-    /* background: #c95b01; */
     border: 2px solid #fff;
     color: #fff;
 }
@@ -121,23 +115,6 @@
         height: 320px;
         width: 320px;
     }
-    /* .profile-details-name{
-        font-size: 20px;
-    }
-    .profile-details-role .primary-text{
-        font-size: 12px;
-    }
-    .profile-options .btn{
-        width: 120px;
-        padding: 11px 0;
-        z-index: 700;
-    }
-    .profile-details-role h1{
-        font-size: 31px;
-    }
-    .profile-role-tagline{
-        font-size: 15px;
-    } */
 }
 @media screen and (max-width: 810px){
     .profile-picture{
@@ -149,10 +126,11 @@
     }
     .profile-options{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-bottom: 10px;
     }
     .profile-details{
+
         margin: 25px 0 0;
     }
     .profile-options .highlighted-btn{
@@ -162,8 +140,21 @@
     .profile-details-role{
         text-align: center;
     }
+    
 }
 
+
+@media screen and (max-width: 575px){
+    .profile-details{
+        /* background: red; */
+        width: 70%;
+    }
+    .primary-text h1{
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    
+}
 @media screen and (max-width: 375px){
     .profile-picture{
         height: 275px;

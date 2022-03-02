@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import {NavLink} from "react-router-dom"
+
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import "./About.css";
@@ -58,7 +60,7 @@ export default function About() {
                 </div>
                 <div className="about-btns">
                     <button className="btn primary-btn">
-                        Hire Me
+                        <NavLink to='/hire' >Hire Me</NavLink>
                     </button>
 
                     <a href="DeepakCV.pdf" download='DeepakCV.pdf'>

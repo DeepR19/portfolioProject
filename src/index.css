@@ -11,6 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 300px;
   overflow: hidden;
 }
 
@@ -122,16 +123,16 @@ body ::-webkit-scrollbar-thumb {
   font-size: 12px;
   background-color: #1f2235;
 }
-/* @media only screen and (max-width: 414px) {
-  .primary-btn {
-    font-size: 13px;
-  }
-} */
+
 
 .primary-btn:hover {
   color: aliceblue;
   border: 2px solid #ff5823;
   background-color: #1f2235;
+}
+.primary-btn>*{
+  color: #fff;
+  text-decoration: none;
 }
 
 .highlighted-btn {
